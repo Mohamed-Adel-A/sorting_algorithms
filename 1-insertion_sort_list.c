@@ -33,7 +33,7 @@ void insertion_sort_list(listint_t **list)
 		return;
 
 	current_node = head;
-	next_node = head->next;
+	next_node = head;
 	printf("befoe current: %i\n",current_node->n);
 	printf("befoe next: %i\n",next_node->n);
 	while(next_node != NULL)
@@ -53,7 +53,8 @@ void insertion_sort_list(listint_t **list)
 			else
 				current_node = current_node->prev;
 		}
-		current_node = next_node;
 		next_node = next_node->next;
+		current_node = next_node;
+		
 	}	
 }
