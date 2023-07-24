@@ -34,6 +34,7 @@ void insertion_sort_list(listint_t **list)
 
 	current_node = head;
 	next_node = head->next;
+	printf("befoe all: %i\n",current_node->n);
 	while(next_node != NULL)
 	{
 		while(current_node->prev != NULL)
