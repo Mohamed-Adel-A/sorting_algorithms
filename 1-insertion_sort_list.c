@@ -49,7 +49,7 @@ void insertion_sort_list(listint_t **list)
 		{
 			if (current_node->n < current_node->prev->n)
 			{
-				swap_nodes(current_node->prev, current_node);
+				swap_nodes(list, current_node->prev, current_node);
 				current_node = current_node->prev;
 				print_list(*list);
 			}
