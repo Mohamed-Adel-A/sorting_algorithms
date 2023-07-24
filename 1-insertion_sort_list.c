@@ -49,6 +49,8 @@ void insertion_sort_list(listint_t **list)
 				printf("befoe: %i\n",current_node->n);
 				print_list(*list);
 			}
+			else
+				current_node = current_node->prev;
 		}
 		current_node = next_node;
 		next_node = next_node->next;
