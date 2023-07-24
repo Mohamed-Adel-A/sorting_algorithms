@@ -15,7 +15,6 @@ void swap_nodes(listint_t **head, listint_t *first_node, listint_t *second_node)
 
 	second_node->prev = first_node->prev;
 	first_node->prev = second_node;
-	printf("in; %i\n",first_node->n);
 }
 
 /**
@@ -34,20 +33,13 @@ void insertion_sort_list(listint_t **list)
 
 	current_node = head;
 	next_node = head;
-	printf("befoe current: %i\n",current_node->n);
-	printf("befoe next: %i\n",next_node->n);
 	while(next_node != NULL)
 	{
-		printf("==============\n");
-		printf("befoer current: %i\n",current_node->n);
-		printf("befoer next: %i\n",next_node->n);
 		while(current_node->prev != NULL)
 		{
 			if (current_node->n < current_node->prev->n)
 			{
-				printf("befoe: %i\n",current_node->n);
 				swap_nodes(list, current_node->prev, current_node);
-				printf("befoe: %i\n",current_node->n);
 				print_list(*list);
 			}
 			else
@@ -55,6 +47,5 @@ void insertion_sort_list(listint_t **list)
 		}
 		next_node = next_node->next;
 		current_node = next_node;
-		
 	}	
 }
