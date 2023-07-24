@@ -1,6 +1,6 @@
 #include "sort.h"
 
-void swap_nodes(listint_t *first_node, listint_t *second_node)
+void swap_nodes(listint_t **head, listint_t *first_node, listint_t *second_node)
 {
 	listint_t *tmp_node;
 
@@ -10,6 +10,9 @@ void swap_nodes(listint_t *first_node, listint_t *second_node)
 
 	if (first_node->prev != NULL)
 		first_node->prev->next = second_node;
+	else
+		*head = second_node;
+
 	if (second_node->next != NULL)
 		second_node->next->prev = first_node;
 	
