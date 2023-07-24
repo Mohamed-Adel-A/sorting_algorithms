@@ -8,7 +8,8 @@
  *
  * Return: nothig (void)
  */
-void swap_nodes(listint_t **head, listint_t *first_node, listint_t *second_node)
+void swap_nodes(listint_t **head, listint_t *first_node,
+		listint_t *second_node)
 {
 	if (first_node->prev != NULL)
 		first_node->prev->next = second_node;
@@ -26,8 +27,8 @@ void swap_nodes(listint_t **head, listint_t *first_node, listint_t *second_node)
 }
 
 /**
- * insertion_sort_list - function that sorts a doubly linked list of integers in ascending order
- *                       using the Insertion sort algorithm
+ * insertion_sort_list - function that sorts a doubly linked list
+ * of integers in ascending order using the Insertion sort algorithm
  * @list: list to be sorted
  *
  * Return: nothing (void)
