@@ -38,6 +38,7 @@ void insertion_sort_list(listint_t **list)
 	printf("befoe next: %i\n",next_node->n);
 	while(next_node != NULL)
 	{
+		printf("==============\n");
 		printf("befoer current: %i\n",current_node->n);
 		printf("befoer next: %i\n",next_node->n);
 		while(current_node->prev != NULL)
