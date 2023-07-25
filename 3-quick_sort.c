@@ -19,15 +19,27 @@ void swap_elements(int *first, int *second)
 
 
 /**
+ * quick_partition: partition the array 
+ * high: high index
+ * low: low index
+ *
+ * Return: void
+ */
+int quick_partition(int *array, size_t low, size_t high)
+{
+}
+
+
+/**
  * quick_recursion: order element recursivly
  * high: high index
  * low: low index
  *
  * Return: void
  */
-void quick_recursion(int *array, int high, int low)
+void quick_recursion(int *array, size_t high, size_t low)
 {
-	
+	int 
 }
 
 /**
@@ -40,5 +52,10 @@ void quick_recursion(int *array, int high, int low)
  */
 void quick_sort(int *array, size_t size)
 {
-	quick_recursion(array, 0, size)
+	if (array == NULL || size < 2)
+	{
+		return;
+	}
+
+	quick_recursion(array, 0, size - 1);
 }
