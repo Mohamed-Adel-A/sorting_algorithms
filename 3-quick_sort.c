@@ -20,12 +20,13 @@ void swap_elements(int *first, int *second)
 
 /**
  * quick_partition: partition the array 
- * high: high index
- * low: low index
+ * @high: high index
+ * @low: low index
+ * @size: array size
  *
  * Return: void
  */
-int quick_partition(int *array, size_t low, size_t high)
+int quick_partition(int *array, size_t low, size_t high, size_t size)
 {
 	int pivotvalue;
 	size_t i = low, k = low;
@@ -49,20 +50,21 @@ int quick_partition(int *array, size_t low, size_t high)
 
 /**
  * quick_recursion: order element recursivly
- * high: high index
- * low: low index
+ * @high: high index
+ * @low: low index
+ * @size: array size
  *
  * Return: void
  */
-void quick_recursion(int *array, size_t low, size_t high)
+void quick_recursion(int *array, size_t low, size_t high, size_t size)
 {
 	size_t pivot;
 
 	if(low < high)
 	{
-		pivot = quick_partition(array, low, high);
-		quick_recursion(array, low, pivot - 1);
-		quick_recursion(array, pivot + 1, high);
+		pivot = quick_partition(array, low, high, size);
+		quick_recursion(array, low, pivot - 1, size);
+		quick_recursion(array, pivot + 1, high, size);
 	}	
 }
 
