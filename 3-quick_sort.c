@@ -30,6 +30,7 @@ int quick_partition(int *array, size_t low, size_t high)
 	int pivotvalue;
 	size_t i = low, k = low;
 
+	pivotvalue = array[high];
 	for (i = low ; i < high ; i++)
 	{
 		if (array[i] <= pivotvalue)
