@@ -83,5 +83,5 @@ void quick_sort(int *array, size_t size)
 		return;
 	}
 
-	quick_recursion(array, 0, size - 1);
+	quick_recursion(array, 0, size - 1, size);
 }
