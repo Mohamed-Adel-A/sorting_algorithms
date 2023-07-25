@@ -30,12 +30,12 @@ int quick_partition(int *array, size_t low, size_t high)
 	int pivotvalue;
 	size_t i = low, k = low;
 
-	for (i = low ; i < hight ; i++)
+	for (i = low ; i < high ; i++)
 	{
 		if (array[i] <= pivotvalue)
 		{
 			swap_elements(&array[k], &array[i]);
-			j++;
+			k++;
 		}
 	}
 	swap_elements(&array[k], &array[high]);
@@ -57,7 +57,7 @@ void quick_recursion(int *array, size_t low, size_t high)
 
 	if(low < high)
 	{
-		pivoit = quick_partition(array, low, high);
+		pivot = quick_partition(array, low, high);
 		quick_recursion(array, low, pivot - 1);
 		quick_recursion(array, pivot + 1, high);
 	}	
