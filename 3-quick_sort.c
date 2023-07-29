@@ -19,7 +19,8 @@ void swap_elements(int *first, int *second)
 
 
 /**
- * quick_partition: partition the array 
+ * quick_partition - partition the array
+ * @array: array to be sorted
  * @high: high index
  * @low: low index
  * @size: array size
@@ -36,7 +37,7 @@ int quick_partition(int *array, size_t low, size_t high, size_t size)
 	{
 		if (array[i] < pivotvalue)
 		{
-			if(k < i)
+			if (k < i)
 			{
 				swap_elements(&array[k], &array[i]);
 				print_array(array, size);
@@ -55,7 +56,8 @@ int quick_partition(int *array, size_t low, size_t high, size_t size)
 
 
 /**
- * quick_recursion: order element recursivly
+ * quick_recursion - order element recursivly
+ * @array: array to be sorted
  * @high: high index
  * @low: low index
  * @size: array size
@@ -66,12 +68,12 @@ void quick_recursion(int *array, size_t low, size_t high, size_t size)
 {
 	size_t pivot;
 
-	if(low < high && high < size)
+	if (low < high && high < size)
 	{
 		pivot = quick_partition(array, low, high, size);
 		quick_recursion(array, low, pivot - 1, size);
 		quick_recursion(array, pivot + 1, high, size);
-	}	
+	}
 }
 
 /**
