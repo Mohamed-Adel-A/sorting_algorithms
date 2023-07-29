@@ -32,9 +32,6 @@ int quick_partition(int *array, size_t low, size_t high, size_t size)
 	size_t i = low, k = low;
 
 	pivotvalue = array[high];
-	printf("low = %lu, high = %lu, pivotvalue = %i\n", low, high, pivotvalue);
-	print_array(array, size);
-	printf("=============\n");
 	for (i = low ; i < high ; i++)
 	{
 		if (array[i] < pivotvalue)
@@ -47,14 +44,11 @@ int quick_partition(int *array, size_t low, size_t high, size_t size)
 			k++;
 		}
 	}
-	printf("-------------\n");
 	if (k < high)
 	{
 		swap_elements(&array[k], &array[high]);
 		print_array(array, size);
 	}
-	printf("new pivot: idx= %lu, value= %i", k, array[k]);
-	printf("\n\n");
 
 	return (k);
 }
