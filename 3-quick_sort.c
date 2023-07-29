@@ -32,7 +32,7 @@ int quick_partition(int *array, size_t low, size_t high, size_t size)
 	size_t i = low, k = low;
 
 	pivotvalue = array[high];
-	printf("========================\n")
+	printf("========================\n");
 	printf("low = %lu, high = %lu, pivotvalue = %i\n", low, high, pivotvalue);
 	for (i = low ; i < high ; i++)
 	{
