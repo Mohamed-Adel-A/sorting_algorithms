@@ -37,7 +37,7 @@ int quick_partition(int *array, size_t low, size_t high, size_t size)
 	printf("=============\n");
 	for (i = low ; i < high ; i++)
 	{
-		if (array[i] < pivotvalue && k < i)
+		if (array[i] < pivotvalue)
 		{
 			swap_elements(&array[k], &array[i]);
 			print_array(array, size);
