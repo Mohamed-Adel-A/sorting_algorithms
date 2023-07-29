@@ -67,7 +67,7 @@ void quick_recursion(int *array, size_t low, size_t high, size_t size)
 	size_t pivot;
 
 	printf("low = %lu, high = %lu\n", low, high);
-	if(low < high)
+	if(low < high && high < size)
 	{
 		pivot = quick_partition(array, low, high, size);
 		quick_recursion(array, low, pivot - 1, size);
