@@ -32,10 +32,6 @@ int quick_partition(int *array, size_t low, size_t high, size_t size)
 	size_t i = low, k = low;
 
 	pivotvalue = array[high];
-	printf("========================\n");
-	printf("low = %lu, high = %lu, pivotvalue = %i\n", low, high, pivotvalue);
-	print_array(array, size);
-	printf("------------------------\n");
 	for (i = low ; i < high ; i++)
 	{
 		if (array[i] <= pivotvalue)
@@ -46,10 +42,8 @@ int quick_partition(int *array, size_t low, size_t high, size_t size)
 		}
 	}
 	swap_elements(&array[k], &array[high]);
-	printf("k = %lu\n", k);
 	print_array(array, size);
 
-	printf("newpivot: idx = %lu , value = %i\n\n", (low + high) / 2, array[(low + high) / 2]);
 	return (k);
 }
 
@@ -66,7 +60,6 @@ void quick_recursion(int *array, size_t low, size_t high, size_t size)
 {
 	size_t pivot;
 
-	printf("low = %lu, high = %lu\n", low, high);
 	if(low < high && high < size)
 	{
 		pivot = quick_partition(array, low, high, size);
