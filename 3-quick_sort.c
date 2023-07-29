@@ -50,7 +50,7 @@ int quick_partition(int *array, size_t low, size_t high, size_t size)
 	print_array(array, size);
 
 	printf("newpivot: idx = %lu , value = %i\n\n", (low + high) / 2, array[(low + high) / 2]);
-	return ((low + high) / 2);
+	return (k);
 }
 
 
