@@ -46,6 +46,7 @@ int quick_partition(int *array, size_t low, size_t high, size_t size)
 	printf("-------------\n");
 	swap_elements(&array[k], &array[high]);
 	print_array(array, size);
+	printf("new pivot: idx= %lu, value= %i", k, array[k]);
 	printf("\n\n");
 
 	return (k);
