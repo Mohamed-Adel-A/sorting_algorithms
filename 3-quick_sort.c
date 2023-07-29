@@ -39,8 +39,11 @@ int quick_partition(int *array, size_t low, size_t high, size_t size)
 	{
 		if (array[i] < pivotvalue)
 		{
-			swap_elements(&array[k], &array[i]);
-			print_array(array, size);
+			if(k < i)
+			{
+				swap_elements(&array[k], &array[i]);
+				print_array(array, size);
+			}
 			k++;
 		}
 	}
